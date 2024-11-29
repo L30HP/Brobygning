@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TV-Pakker</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(to right, #292527, #3d3b3b);
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3d3b3b, #292527);
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #36868f;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-size: 24px;
+            color: #36868f;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        main {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .packages {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .package {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 12px;
+            flex: 1;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Emphasize the Big Package */
+        .package.big {
+            flex: 1.5;
+            background-color: #333;
+        }
+
+        .package:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .package h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #45cad9;
+            text-transform: uppercase;
+        }
+
+        .package p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #3f62c8;
+        }
+
+        .package .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .package .gallery-item {
+            flex: 1 1 80px;
+            max-width: 100px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .package .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 2px solid #203671;
+        }
+
+        .package .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .package .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #222;
+            color: #999;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            font-size: 14px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .packages {
+                flex-direction: column;
+            }
+
+            .package {
+                flex: none;
+                margin-bottom: 20px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TV-Pakke</h1>
+    <h2>Den perfekte TV-Pakke til din familie</h2>
+</header>
+
+<main>
+
+    
+    <div class="packages">
+        <!-- Middle Package -->
+        <div class="package" onclick="location.href='middle-package.html';">
+            <h3>Middle Package</h3>
+            <p>175; DKK</p>
+            <div class="gallery">
+                <!-- Icons for Middle Package -->
+                <div class="gallery-item">
+                    <a href="https://www.netflix.com">
+                        <img src="Netflix_icon.svg.png" alt="Netflix">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.disneyplus.com">
+                        <img src="disney+.png" alt="Disney+">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.tv2.com">
+                        <img src="tv2.png" alt="TV-2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.discoveryplus.com">
+                        <img src="discovery.png" alt="TV-2">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Big Package -->
+        <div class="package big" onclick="location.href='big-package.html';">
+            <h3>Big Package</h3>
+            <p>235; DKK</p>
+            <div class="gallery">
+                <!-- Icons for Big Package -->
+                <div class="gallery-item">
+                    <a href="https://www.netflix.com">
+                        <img src="Netflix_icon.svg.png" alt="Netflix">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.disneyplus.com">
+                        <img src="disney+.png" alt="Disney+">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.play.tv2.dk">
+                        <img src="tv2.png" alt="TV-2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.discoveryplus.com">
+                        <img src="discovery.png" alt="Discovery+">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.max.com">
+                        <img src="hbo.png" alt="Max">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Package -->
+        <div class="package" onclick="location.href='budget-package.html';">
+            <h3>Budget Package</h3>
+            <p>125; DKK</p>
+            <div class="gallery">
+                <!-- Icons for Budget Package -->
+                <div class="gallery-item">
+                    <a href="https://www.play.tv2.dk">
+                        <img src="tv2.png" alt="TV-2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.discoveryplus.com">
+                        <img src="discovery.png" alt="Discovery+">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.discoveryplus.com">
+                        <img src="Netflix_icon.svg.png" alt="Discovery+">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Exner.dk. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
